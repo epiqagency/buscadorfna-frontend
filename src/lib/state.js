@@ -30,6 +30,7 @@ export function getSlidesForMode(modalidad) {
 }
 
 export const initialState = {
+  screen: 'wizard',            // 'wizard' | 'searching' | 'results'
   slideIndex: 0,
   modalidad: null,             // 'preaprobado' | 'aprobado'
   monto: '',                   // string para permitir formateo con puntos
@@ -41,6 +42,9 @@ export const initialState = {
   condicion: 'ambas',          // 'nueva' | 'usada' | 'ambas'
   habitaciones: null,          // 1 | 2 | 3 | 4
   pdfData: null,               // { montoAprobado, fechaCarta, ... } (modo aprobado)
+  // Datos de la búsqueda actual (se completan al llamar a Supabase):
+  propiedades: [],             // array de items del endpoint /buscar-cache
+  filtros: null,               // body enviado al endpoint (para seed de mezcla)
 };
 
 export function reducer(state, action) {

@@ -7,23 +7,20 @@ set LOG=git-commit.log
 if exist .git\index.lock del .git\index.lock 2>nul
 
 > commit-msg.txt (
-  echo feat: sesion 2 - 7 slides del wizard implementados
+  echo feat: sesion 3 - integraciones Supabase + Bold + resultados
   echo.
-  echo - SlideModalidad (auto-avance^)
-  echo - SlideMonto (input formato miles, validacion ^>=20M^)
-  echo - SlideAhorrosSubsidio (input ahorros + Si/No subsidio + input condicional^)
-  echo - SlideCiudades (6 chips multi-select^)
-  echo - SlideTipoCondicion (chips tipos multi + chips condicion single^)
-  echo - SlideHabitaciones (4 chips single + auto-avance^)
-  echo - SlideResumen (recap con presupuesto = monto + ahorros + subsidio, sin margen^)
-  echo - SlidePDF placeholder (implementacion real en Sesion 4^)
+  echo - src/lib/api.js: POST a Supabase /buscar-cache + endpoints Bold/Claude
+  echo - src/lib/shuffle.js: mulberry32 + hashCode + shuffleDeterministic + semillaDeFiltros
+  echo - src/lib/bold.js: montarBotonBold(^) - injects checkout.bold.co script
+  echo - src/components/SearchOverlay.jsx: overlay animado 3 portales idle-^>consulting-^>done
+  echo - src/components/PropertyCard.jsx: card individual con portal, precio, ubicacion
+  echo - src/components/PaywallBold.jsx: paywall con precio + bullets + Bold button
+  echo - src/screens/PantallaResultados.jsx: 7 gratis mezcladas + paywall + 4 bloqueadas blur
+  echo - state agrega screen: wizard ^| searching ^| results + propiedades + filtros
+  echo - App.jsx maneja transicion wizard -^> overlay -^> resultados
+  echo - Presupuesto sin margen: monto + ahorros + subsidio
   echo.
-  echo - Auto-avance con 350ms delay en modalidad y habitaciones
-  echo - CTA oculto (hideContinue^) en slides de auto-avance
-  echo - Validacion por slide via canAdvance(^)
-  echo - Progress dots dinamicos (7-^>8 al elegir "aprobado"^)
-  echo - Componentes reutilizables: Chip, InputMonto, InputCompact, YesNoButtons, OptionCard
-  echo - 8 ilustraciones SVG (una por slide^)
+  echo BUG conocido: layout del resumen desborda en desktop, CTA se corta. Fix en Sesion 4.
 )
 
 > %LOG% (

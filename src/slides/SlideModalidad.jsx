@@ -47,7 +47,7 @@ export function SlideLayout({ ilustracion, children }) {
       <div className="flex-none flex justify-center items-center h-[clamp(110px,20vh,180px)] pt-[clamp(6px,1.5vh,12px)]">
         {ilustracion}
       </div>
-      <div className="flex-1 flex flex-col justify-start min-h-0 pt-[clamp(8px,2vh,16px)] overflow-hidden">
+      <div className="flex-1 flex flex-col justify-start min-h-0 pt-[clamp(8px,2vh,16px)] overflow-y-auto">
         {children}
       </div>
     </div>
