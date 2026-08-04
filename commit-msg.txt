@@ -1,0 +1,17 @@
+feat: sesion 2 - 7 slides del wizard implementados
+
+- SlideModalidad (auto-avance)
+- SlideMonto (input formato miles, validacion >=20M)
+- SlideAhorrosSubsidio (input ahorros + Si/No subsidio + input condicional)
+- SlideCiudades (6 chips multi-select)
+- SlideTipoCondicion (chips tipos multi + chips condicion single)
+- SlideHabitaciones (4 chips single + auto-avance)
+- SlideResumen (recap con presupuesto = monto + ahorros + subsidio, sin margen)
+- SlidePDF placeholder (implementacion real en Sesion 4)
+
+- Auto-avance con 350ms delay en modalidad y habitaciones
+- CTA oculto (hideContinue) en slides de auto-avance
+- Validacion por slide via canAdvance()
+- Progress dots dinamicos (7->8 al elegir "aprobado")
+- Componentes reutilizables: Chip, InputMonto, InputCompact, YesNoButtons, OptionCard
+- 8 ilustraciones SVG (una por slide)
