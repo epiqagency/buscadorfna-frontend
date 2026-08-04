@@ -17,7 +17,7 @@ export function CtaBar({
           type="button"
           onClick={onBack}
           className="
-            basis-1/4 rounded-full
+            flex-none w-[90px] py-3 rounded-full
             border-2 border-marca-border bg-marca-card
             text-marca-text font-semibold
             flex items-center justify-center gap-1
@@ -36,11 +36,10 @@ export function CtaBar({
           onClick={onContinue}
           disabled={disabled}
           className={[
-            'rounded-full font-bold text-white',
+            'flex-1 min-w-0 py-3 rounded-full font-bold text-white',
             'flex items-center justify-center gap-2',
             'transition-all duration-brand',
             'shadow-brand-md',
-            showBack ? 'basis-3/4' : 'basis-full',
             disabled
               ? 'bg-marca-border-strong cursor-not-allowed opacity-60'
               : 'bg-marca-verde hover:bg-marca-verde-dark active:scale-[0.98]',

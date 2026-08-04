@@ -106,7 +106,7 @@ export default function App() {
             {slides.map((key) => {
               const Comp = SLIDE_COMPONENTS[key];
               return (
-                <div key={key} className="min-w-full h-full">
+                <div key={key} className="w-full flex-shrink-0 h-full overflow-hidden">
                   {Comp && (
                     <Comp
                       state={state}
